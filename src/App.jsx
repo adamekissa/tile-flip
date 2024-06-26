@@ -1,33 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import { Tile } from './components/Tile.jsx'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <h3>Welcome to the tile flip Game</h3>
+      <div className='card-container'>
+        <table>
+          <tr>
+            <td><Tile text="Key" imoji="🔑" /> </td>
+            <td><Tile text="Monkey" imoji="🐒" /></td>
+            <td><Tile text="Horse" imoji="🐎" /> </td>
+            <td><Tile text="Train" imoji="🚆" /></td>
+            <td><Tile text="House" imoji="🏠" /></td>
+            <td><Tile text="Ring" imoji="💍" /></td>
+            <td><Tile text="Violin" imoji="🎻" /></td>
+          </tr>
+          <tr>
+            <td><Tile text="Beetle" imoji="🪲" /></td>
+            <td><Tile text="Sun" imoji="☀️" /> </td>
+            <td><Tile text="Bicycle" imoji="🚲" /> </td>
+            <td><Tile text="Cow" imoji="🐄" /></td>
+            <td><Tile text="Glasses" imoji="👓" /></td>
+            <td><Tile text="Pencil" imoji="✏️" /></td>
+            <td><Tile text="Pencil" imoji="✏️" /></td>
+          </tr>
+        </table>
+
+
+
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
